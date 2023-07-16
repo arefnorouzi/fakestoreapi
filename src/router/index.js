@@ -5,6 +5,8 @@ import ProductView from '../views/products/ProductView.vue'
 import AddProduct from '../views/products/AddProduct.vue'
 import AllCategories from '../views/categories/AllCategories.vue'
 import CategoryProducts from "../views/categories/CategoryProducts.vue";
+import AllCarts from "../views/cart/AllCarts.vue";
+import ShowCart from "../views/cart/ShowCart.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,7 +45,17 @@ const router = createRouter({
       path: '/category/:id',
       name: 'category-products',
       component: CategoryProducts
-    }
+    },
+    {
+      path: '/carts',
+      name: 'carts',
+      component: AllCarts
+    },
+    {
+      path: '/carts/:id',
+      name: 'show-cart',
+      component: ShowCart
+    },
   ]
 })
 

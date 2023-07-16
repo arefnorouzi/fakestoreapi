@@ -68,6 +68,7 @@ export default{
     </div>
 
     <div class="col-lg-3 mb-3">
+      <router-link to="/categories" class="text-decoration-none">
       <div class="card shadow">
         <div class="card-body py-5">
           <h3>Get in categories</h3>
@@ -75,9 +76,11 @@ export default{
           <p>products in a specific category</p>
         </div>
       </div>
+      </router-link>
     </div>
 
     <div class="col-lg-3 mb-3">
+      <router-link to="/carts" class="text-decoration-none">
       <div class="card shadow">
         <div class="card-body py-5">
           <h3>All Carts</h3>
@@ -85,6 +88,7 @@ export default{
           <p>return all carts</p>
         </div>
       </div>
+      </router-link>
     </div>
 
     <div class="col-lg-3 mb-3">
