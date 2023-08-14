@@ -1,7 +1,7 @@
 <template>
 
   <div class="row">
-    <div v-if="product" class="col-lg-12">
+    <div v-if="product" class="col-lg-6 mb-3">
       <div class="card shadow">
         <div class="card-body">
           <h3>{{product.title}}</h3>
@@ -14,8 +14,15 @@
             <button v-if="qty > 0" class="btn btn-success" @click="addToCart">Add To Cart</button>
           </div>
         </div>
-        <div class="card-footer">
-          {{carts}}
+      </div>
+    </div>
+    <div class="col-lg-6 mb-3">
+      <div class="card shadow">
+        <div class="card-body">
+          <h3>Shopping Cart with <a href="https://pinia.vuejs.org" target="_blank">#Pinia</a></h3>
+          <div class="my-3">
+            <pre>{{cartStore.cart}}</pre>
+          </div>
         </div>
       </div>
     </div>
@@ -24,15 +31,19 @@
 
 <script>
 import { useRoute } from 'vue-router'
+import { useCartStore } from '../../stores/Cart'
 export default {
   name: "ProductView",
+  setup(){
+    const cartStore = useCartStore();
+    return {cartStore};
+  },
   data(){
     const route = useRoute();
     return{
       id: Number(route.params.id),
       product: null,
       qty: 1,
-      carts: []
     }
   },
   mounted() {
@@ -57,7 +68,7 @@ export default {
           date: new Date(),
           products:[{productId: this.id, quantity: this.qty}]
         }).then((response) => {
-          this.carts.push(response.data);
+          this.cartStore.cart.push(response.data);
         })
       }
     }

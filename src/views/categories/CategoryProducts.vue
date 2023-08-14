@@ -29,7 +29,6 @@ export default {
   },
   methods:{
     getProducts(){
-      alert(this.categories[this.id - 1]);
       this.axios.get(`https://fakestoreapi.com/products/category/${this.categories[this.id - 1]}`).then((response) => {
         this.products = response.data;
       })
