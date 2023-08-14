@@ -1,6 +1,11 @@
-# fakestoreapi
+# FakeStoreAPI.com API Connection in Vue.js
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a simple guide on how to connect to the FakeStoreAPI.com API using Vue.js
+
+## Prerequisites
+- [Nodejs](https://nodejs.org/) installed on your machine
+-  Basic knowledge of [VueJs](https://vuejs.org/)
+
 
 ## Recommended IDE Setup
 
