@@ -1,10 +1,11 @@
-# FakeStoreAPI.com API Connection in Vue.js
+# FakeStoreAPI.com API in Vue.js
 
-This is a simple guide on how to connect to the FakeStoreAPI.com API using Vue.js
+This is a simple guide on how to connect to the FakeStoreAPI.com API using Vue.js and Pinia
 
 ## Prerequisites
 - [Nodejs](https://nodejs.org/) installed on your machine
 -  Basic knowledge of [VueJs](https://vuejs.org/)
+-  Basic knowledge of [Pinia](https://pinia.vuejs.org/)
 
 
 ## Recommended IDE Setup
